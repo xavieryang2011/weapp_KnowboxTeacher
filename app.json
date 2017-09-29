@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/exam/exam",
+    "pages/profile/profile",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "作业盒子",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#64dcdc",
+    "borderStyle": "#ff808080",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/exam/exam",
+        "iconPath": "images/icon_stu_normal.png",
+        "selectedIconPath": "images/icon_stu_selected.png",
+        "text": "测验",
+        "textColor": "#ffffff"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "images/icon_profile_normal.png",
+        "selectedIconPath": "images/icon_profile_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

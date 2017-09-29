@@ -1,0 +1,27 @@
+<view class='exam-container'>
+  <view class='classInfo'>
+    <view class='section'>
+      <picker bindchange='bindClassChange' value='{{index}}' range='{{array}}'>
+        <view class='class-picker'>{{array[index]}}</view>
+      </picker>
+      <view class='img'>
+        <image style='width:24rpx;height:24rpx' src='/images/bt_question_link_array_down.png'></image>
+      </view>
+    </view>
+    <view class='class-num'>共2人</view>
+  </view>
+  <view class='publisher'>
+    <picker bindchange='bindPublisherChange' value='{{publisherId}}' range='{{publisher}}'>
+      <view class='publisher-picker'>{{publisher[publisherId]}}</view>
+    </picker>
+    <view class='img'>
+      <image style='width:24rpx;height:24rpx' src='/images/bt_question_link_array_down.png'></image>
+    </view>
+    <picker bindchange='bindGradeChange' value='{{gradeId}}' range='{{grade[publisherId].grades}}' style='margin-left:15rpx'>
+      <view class='publisher-picker'>{{grade[publisherId].grades[gradeId]}}</view>
+    </picker>
+    <view class='img'>
+      <image style='width:24rpx;height:24rpx' src='/images/bt_question_link_array_down.png'></image>
+    </view>
+  </view>
+</view>
