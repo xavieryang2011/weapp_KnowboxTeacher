@@ -1,0 +1,39 @@
+/* pages/examDetail/examDetail.wxss */
+.exam-detail-container{
+  height: 100%;
+  width: 100%;
+}
+.listView{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin-top: 100rpx;
+}
+.icon{
+  margin-left: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.text{
+  height: 40rpx;
+  margin-left: 35rpx;
+}
+.text-top{
+  font-size: 30rpx;
+  font-weight: 60;
+}
+.text-bottom{
+  font-size: 20rpx;
+  font-weight: 40;
+  color: #999999;
+  margin-top: 15rpx;
+}
+.button{
+  border-radius: 16rpx;
+  color: white;
+  background-color: #64dcdc;
+  text-align: center;
+  width: 200rpx;
+  margin-left: 200rpx;
+}

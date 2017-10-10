@@ -2,7 +2,8 @@
   "pages": [
     "pages/exam/exam",
     "pages/profile/profile",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/examDetail/examDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

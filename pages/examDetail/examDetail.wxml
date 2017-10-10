@@ -1,0 +1,11 @@
+<view class="exam-detail-container">
+   <view wx:for="{{unitInfo}}" wx:key="unitID" bindtap='selectSection'
+   class='listView'>
+     <image class='icon' src='{{item.typeIcon}}'></image>
+     <br class='text'>
+       <view class='text-top'>{{item.name}}</view>
+       <view class='text-bottom'>已布置{{item.totalSection}}次测验</view>
+     </br>
+     <button class='button'>Test</button>
+   </view>
+</view>
