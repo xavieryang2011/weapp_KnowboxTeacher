@@ -1,0 +1,24 @@
+<!--pages/preview/preview.wxml-->
+<scroll-view scroll-y="true" scroll-x="true"  class='listview'>
+<block wx:for="{{questionInfos}}" wx:key="wordID" class='block' >
+  <image class='underline' src='../../images/underline.png'></image>
+  <view class='word-content'>
+    <text class='word-content-text'>{{item.wordContent}}</text>
+  </view>
+  <image class='underline' src='../../images/underline.png'></image>
+  <view class='title'>{{index+1}}.{{item.questionList[0].dimName}}
+  </view>
+  <view class='content'>
+    {{item.questionList[0].content.text}}
+  </view>
+  <view wx:for="{{item.questionList[0].itemList}}" wx:key="itemCode" class='item-list'>
+    <view class='option-title'>{{item.itemCode}}</view>
+    <view class='option-content'>{{item.questionItem}}</view>
+  </view>
+</block>
+</scroll-view>
+<view class='bottome'>
+ <image class='underline' src='../../images/underline.png'>
+ </image>
+ <button class='button'>确认出题</button>
+</view>

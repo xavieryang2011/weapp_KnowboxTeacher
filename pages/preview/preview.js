@@ -1,4 +1,4 @@
-// pages/section/section.js
+// pages/preview/preview.js
 const api=require("../../libraries/data.js")
 Page({
 
@@ -6,21 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-     unitTitle:'unit',
-     packageInfos:{}
+    questionInfos:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     api.getData("getPackageList",options.unitID)
-     .then(d=>{
-       this.setData({
-         unitTitle:options.unitID,
-         packageInfos:d.data.packages
-       })
-     })
+    wx.setNavigationBarTitle({
+      title: '预览选题',
+    });
+    api.getData("getQuestionList")
+    .then(d=>{
+      this.setData({
+         questionInfos:d.data.list
+      })
+    })
+
   },
 
   /**
@@ -70,10 +72,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  preview:function(){
-    wx.navigateTo({
-      url: '../preview/preview',
-    })
   }
 })

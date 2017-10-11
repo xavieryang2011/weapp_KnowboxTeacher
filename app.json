@@ -4,7 +4,8 @@
     "pages/profile/profile",
     "pages/logs/logs",
     "pages/examDetail/examDetail",
-    "pages/section/section"
+    "pages/section/section",
+    "pages/preview/preview"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,1 +1,50 @@
 /* pages/section/section.wxss */
+.title{
+  height: 80rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+}
+.section-container{
+  width: 100%;
+  height: 100%;
+  background-color: #eef0f4
+}
+.icon-package{
+  width: 50rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+.icon-right{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 230rpx;
+  margin-top: 50rpx;
+}
+.item{
+  background-color: white;
+  align-content: center;
+}
+.listView-item{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.content-top{
+  font-size: 40rpx;
+}
+.content-bottom{
+  font-size: 30rpx;
+  color: #d1d3d7;
+}
+.underline{
+  width: 100%;
+  height: 5rpx;
+}

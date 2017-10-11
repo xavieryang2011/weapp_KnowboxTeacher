@@ -5,6 +5,7 @@ Page({
    */
   data: {
     unitInfo: {},
+    mtitle:'unit',
   },
 
   /**
@@ -17,7 +18,7 @@ Page({
         console.log(d.title);
         that.setData({
           unitInfo: d.testList,
-          mtitle: d.title
+          mtitle: options.unitID
         })
         wx.setNavigationBarTitle({
           title: options.unitID,
@@ -75,7 +76,7 @@ Page({
   },
   selectSection:function(event){
     wx.navigateTo({
-      url: '../section/section',
+      url: '../section/section?unitID='+this.data.mtitle,
     })
   }
 })

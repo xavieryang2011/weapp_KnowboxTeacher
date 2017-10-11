@@ -1,2 +1,19 @@
 <!--pages/section/section.wxml-->
-<text>pages/section/section.wxml</text>
+<view class='section-container'>
+  <view class='title'>
+    <text class='title-text'>{{unitTitle}}</text>
+  </view>
+  <view wx:for='{{packageInfos}}' wx:key='packageID' bindtap='preview' data-packageID='{{item.packageID}}'>
+  <view class='item'>
+    <br class='listView-item'>
+    <image class='icon-package' src='../../images/icon_assign_package.png'></image>
+    <br class='content'>
+    <text class='content-top'>{{item.name}}</text>
+    <text class='content-bottom'>{{item.desc}}</text>
+    </br>
+    <image class='icon-right' src='../../images/icon_more_right.png'></image>
+    </br>
+    <image class='underline' src='../../images/underline.png'></image>
+    </view>
+  </view>
+</view>
