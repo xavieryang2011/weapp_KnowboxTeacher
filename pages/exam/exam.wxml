@@ -1,5 +1,5 @@
 <view class='exam-container'>
-  <view class='exam-top-container'>
+<view class='exam-top-container'>
     <view class='classInfo'>
       <view class='section'>
         <picker bindchange='bindClassChange' value='{{index}}' range='{{array}}'>
@@ -26,11 +26,11 @@
       </view>
     </view>
   </view>
-  <view wx:for="{{unitInfos}}" wx:key="unitID" class="listView" bindtap="showDetail" data-unitInfo="{{item.unitID}}">
+  <view wx:for="{{unitInfos}}" wx:key="unitID" class="listView" bindtap="showDetail" data-unitInfo="{{item.title}}">
     <br class="listView-item-class">
-      <view class='listView-item-title'>{{item.title}}</view>
-      <image class='arrow-right-icon' src='../../images/ic_arrow_right_blue.png'></image>
+    <view class='listView-item-title'>{{item.title}}</view>
+    <image class='arrow-right-icon' src='../../images/ic_arrow_right_blue.png'></image>
     </br>
-      <image class='listView-item-underline' src='../../images/underline.png'></image>
+    <image class='listView-item-underline' src='../../images/underline.png'></image>
   </view>
 </view>

@@ -3,7 +3,8 @@
     "pages/exam/exam",
     "pages/profile/profile",
     "pages/logs/logs",
-    "pages/examDetail/examDetail"
+    "pages/examDetail/examDetail",
+    "pages/section/section"
   ],
   "window": {
     "backgroundTextStyle": "light",

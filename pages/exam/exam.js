@@ -2,7 +2,7 @@ const api = require("../../libraries/data.js")
 Page({
   data: {
     class_arrow_src: 'images/bt_question_link_array_down.png',
-    array: ['yangxh', '默认班级', '+新建班级'],
+    array: ['默认班级', '比赛班级', '+新建班级'],
     index: 0,
 
     publisher: ['人教版', '鲁教版'],
