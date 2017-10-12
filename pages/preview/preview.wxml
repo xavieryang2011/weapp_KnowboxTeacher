@@ -1,11 +1,11 @@
 <!--pages/preview/preview.wxml-->
 <scroll-view scroll-y="true" scroll-x="true"  class='listview'>
 <block wx:for="{{questionInfos}}" wx:key="wordID" class='block' >
-  <image class='underline' src='../../images/underline.png'></image>
+  <view class='divider'></view>
   <view class='word-content'>
     <text class='word-content-text'>{{item.wordContent}}</text>
   </view>
-  <image class='underline' src='../../images/underline.png'></image>
+  <view class='divider'></view>
   <view class='title'>{{index+1}}.{{item.questionList[0].dimName}}
   </view>
   <view class='content'>
@@ -17,8 +17,7 @@
   </view>
 </block>
 </scroll-view>
-<view class='bottome'>
- <image class='underline' src='../../images/underline.png'>
- </image>
- <button class='button'>确认出题</button>
+<view class='bottom'>
+  <view class='divider'></view>
+ <button class='button' bindtap='finish'>确认出题</button>
 </view>

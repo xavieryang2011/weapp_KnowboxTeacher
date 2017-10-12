@@ -1,0 +1,51 @@
+<!--pages/deploy/deploy.wxml-->
+<scroll-view scroll-y='true' class='scroll-view'>
+<view class='divider'></view>
+<view class='test-name'>
+  <view class='title'>测验名称</view>
+  <view class='text'>{{unitName}}测验</view>
+  <image class='icon-right' src='../../images/icon_more_right.png'></image>
+</view>
+<view class='divider-weight'></view>
+<view class='test-name'>
+  <view class='title'>开始时间</view>
+  <picker class='text' mode='time' value='{{time}}' start="00:00" end="23:59" bindchange='bindTimeChange'>
+    <view>{{time}}</view>
+  </picker>
+  <image class='icon-right' src='../../images/icon_more_right.png'></image>
+</view>
+<view class='divider'></view>
+<view class='test-name'>
+  <view class='title'>测验时长</view>
+  <picker class='text' mode='time' value='{{time}}' start="00:00" end="23:59" bindchange='bindTimeChange'>
+    <view>{{time}}</view>
+  </picker>
+  <image class='icon-right' src='../../images/icon_more_right.png'></image>
+</view>
+<view class='divider-weight'></view>
+<view class='test-name'>
+  <view class='title'>提交后立即显示答案</view>
+  <switch class='text' bindchange='switchBindChange'></switch>
+  <image class='icon-right' src='../../images/icon_more_right.png'></image>
+</view>
+<view class='divider-weight'></view>
+<view class='test-name'>
+  <view class='title'>发布到</view>
+</view>
+<view class='divider'></view>
+<view wx:for="{{classInfo}}" wx:key="classId">
+  <view class='content'>
+    <image class='icon-class' src='../../images/icon_class_default.png'></image>
+    <view class='content-text'>
+      <text class='content-text-top'>{{item.className}}</text>
+      <text class='content-text-bottom'>共{{item.studentCount}}人</text>
+    </view>
+    <checkbox class='radio' bindtap='checkboxchanged' color='#64dcdc' value='{{item.classID}}'></checkbox>
+  </view>
+  <view class='divider'></view>
+</view>
+</scroll-view>
+<view class='bottom'>
+  <view class='divider'></view>
+  <button class='button'>确认发布</button>
+</view>

@@ -1,30 +1,36 @@
-// pages/preview/preview.js
-const api=require("../../libraries/data.js")
+// pages/deploy/deploy.js
+const api=require('../../libraries/data.js');
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    questionInfos:{},
-    unitName:"unit1"
+      unitName:'Unit1',
+      time:'00:00',
+      classInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '预览选题',
-    });
-    api.getData("getQuestionList")
-    .then(d=>{
-      this.setData({
-         questionInfos:d.data.list,
-         unitName:options.unitName
-      })
-    })
-
+    var myDate=new Date();
+    var hours=myDate.getHours<10?'0'+myDate.getHours():myDate.getHours();
+    var mins=myDate.getMinutes()<10?'0'+myDate.getMinutes():myDate.getMinutes();
+     this.setData({
+       unitName:options.unitName,
+       time:hours+':'+mins
+     })
+     wx.setNavigationBarTitle({
+       title: '发布测验',
+     })
+    
+    api.getData("classList")
+        .then(d=>{
+          this.setData({
+            classInfo:d.data.classList
+          })
+        })
   },
 
   /**
@@ -75,9 +81,15 @@ Page({
   onShareAppMessage: function () {
   
   },
-  finish: function(){
-    wx.navigateTo({
-      url: '../deploy/deploy?unitName='+this.data.unitName,
+  bindTimeChange: function(e){
+    this.setData({
+      time:e.detail.value
     })
+  },
+  switchBindChange:function(e){
+
+  },
+  checkboxchanged:function(e){
+    console.log(e);
   }
 })

@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/examDetail/examDetail",
     "pages/section/section",
-    "pages/preview/preview"
+    "pages/preview/preview",
+    "pages/deploy/deploy"
   ],
   "window": {
     "backgroundTextStyle": "light",

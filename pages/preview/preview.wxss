@@ -8,8 +8,8 @@ page{
   height: 10rpx;
 }
 .word-content{
-  height: 50rpx;
-  padding-top: 20rpx;
+  height: 80rpx;
+  padding-top: 30rpx;
 }
 .word-content-text{
   font-weight: 50rpx;
@@ -40,14 +40,15 @@ page{
   display: flex;
   position: fixed;
   box-sizing: border-box;
+  flex-direction: column;
 }
 .button{
   background-color:#64dcdc;
   border-radius: 8rpx;
   color: white;
-  width: 400rpx;
+  width: 80%;
   height: 80rpx;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
 }
 .preview-container{
   width: 100%;

@@ -73,7 +73,7 @@ Page({
   },
   preview:function(){
     wx.navigateTo({
-      url: '../preview/preview',
+      url: '../preview/preview?unitName='+this.data.unitTitle,
     })
   }
 })
