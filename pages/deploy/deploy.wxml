@@ -17,8 +17,8 @@
 <view class='divider'></view>
 <view class='test-name'>
   <view class='title'>测验时长</view>
-  <picker class='text' mode='time' value='{{time}}' start="00:00" end="23:59" bindchange='bindTimeChange'>
-    <view>{{time}}</view>
+  <picker class='text' mode='time' value='{{durationTime}}' start="00:00" end="23:59" bindchange='bindDurationTimeChange'>
+    <view>{{durationTime}}</view>
   </picker>
   <image class='icon-right' src='../../images/icon_more_right.png'></image>
 </view>
@@ -47,5 +47,5 @@
 </scroll-view>
 <view class='bottom'>
   <view class='divider'></view>
-  <button class='button'>确认发布</button>
+  <button class='button' bindtap='deploy'>确认发布</button>
 </view>
